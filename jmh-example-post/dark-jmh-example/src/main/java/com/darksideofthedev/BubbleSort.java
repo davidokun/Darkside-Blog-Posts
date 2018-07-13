@@ -4,6 +4,28 @@ package com.darksideofthedev;
 public class BubbleSort {
 
     /**
+     * Standalone execution
+     */
+    public static void main(String[] args) {
+
+        BenchmarkState benchmarkState = new BenchmarkState();
+        benchmarkState.setUp();
+
+        System.out.println("Unsorted array");
+        for (int element : benchmarkState.unsortedArray) {
+            System.out.print(element + " ");
+        }
+
+        bubbleSort(benchmarkState.unsortedArray);
+
+        System.out.println("\nSorted array");
+        for (int element : benchmarkState.unsortedArray) {
+            System.out.print(element + " ");
+        }
+
+    }
+
+    /**
      * Bubble Sort Algorithm
      *
      * Complexity = O(n^2) -> Quadratic
