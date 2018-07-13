@@ -3,6 +3,24 @@ package com.darksideofthedev;
 
 public class QuickSort {
 
+    public static void main(String[] args) {
+
+        BenchmarkState benchmarkState = new BenchmarkState();
+        benchmarkState.setUp();
+
+        System.out.println("Unsorted array");
+        for (int element : benchmarkState.unsortedArray) {
+            System.out.print(element + " ");
+        }
+
+        quickSort(benchmarkState.unsortedArray, 0, benchmarkState.unsortedArray.length);
+
+        System.out.println("\nSorted array");
+        for (int element : benchmarkState.unsortedArray) {
+            System.out.print(element + " ");
+        }
+    }
+
     /**
      * Quick Sort Algorithm.
      *
